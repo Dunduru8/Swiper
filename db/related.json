@@ -1,0 +1,49 @@
+[
+   { "id": 10,
+    "name": "T-shirt",
+    "img": "https://student-geekbrains.000webhostapp.com/img/featured_1.jpg",
+    "thumb": "https://student-geekbrains.000webhostapp.com/img/Product_9_small.jpg",
+    "singl": "https://student-geekbrains.000webhostapp.com/img/Product_single_item_9.jpg",
+    "price": 50.25,
+    "color": "blue",
+    "category": "men",
+    "material": "cotton blend",
+    "brand": "Dkeny"
+   },
+   {
+    "id": 11,
+    "Name": "T-shirt",
+    "img": "https://student-geekbrains.000webhostapp.com/img/Product_women_1.jpg",
+    "thumb": "https://student-geekbrains.000webhostapp.com/img/Product_women_1_small.jpg",
+    "singl": "https://student-geekbrains.000webhostapp.com/img/Product_single_item_women_1.jpg",
+    "Price": 50.25,
+    "color": "white",
+    "category": "women",
+    "material": "cotton blend",
+    "brand": "Chloi"
+  },
+  {
+    "id": 12,
+    "Name": "Top",
+    "img": "https://student-geekbrains.000webhostapp.com/img/Product_women_2.jpg",
+    "thumb": "https://student-geekbrains.000webhostapp.com/img/Product_women_2_small.jpg",
+    "singl": "https://student-geekbrains.000webhostapp.com/img/Product_single_item_women_2.jpg",
+    "Price": 80.05,
+    "color": "red",
+    "category": "women",
+    "material": "silk",
+    "brand": "Mango"
+  },
+  {
+    "id": 7,
+    "Name": "Jacket",
+    "img": "https://student-geekbrains.000webhostapp.com/img/Product_7.jpg",
+    "thumb": "https://student-geekbrains.000webhostapp.com/img/Product_7_small.jpg",
+    "singl": "https://student-geekbrains.000webhostapp.com/img/Product_single_item_7.jpg",
+    "Price": 50.25,
+    "color": "light blue",
+    "category": "men",
+    "material": "cotton blend",
+    "brand": "Quiksilve"
+  }
+]
