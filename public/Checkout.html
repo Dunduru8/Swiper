@@ -56,18 +56,6 @@
                 <div class= "drop_cart">
                  <a href="cart.html"><img class="anim-cart" src="https://student-geekbrains.000webhostapp.com/img/cart.svg" alt="cart" id="cart"></a>
                   
-                 <div class="drop_down_cart">
-                     
-                  <cart_drop_list :drop="cart" @ondel="handleDeleteClick"></cart_drop_list>
-                    
-                    
-                    <div class= "checkout">
-                        <a href="Checkout.html">checkout</a>
-                    </div>
-                    <div class= "go_cart">
-                        <a href="Cart.html">Go to cart</a>
-                    </div>
-                </div>
                 
               </div> 
             <a href="#" class= "button">My Account<img class="whtite" src="https://student-geekbrains.000webhostapp.com/img/hover_white.png" alt="arrow"></a> 
@@ -435,9 +423,9 @@
                      <p class="shipping_adress_text">Please log in below</p>  
                      <form action="#">
                          <div class="adress_label">EMAIL ADDRESS <p> *</p></div>
-                         <input type="email" id="email_adress" required>
+                         <input type="email" required>
                          <div class="adress_label">PASSWORD (8 characters minimum)<p> *</p></div>
-                         <input type="password" id="shipping_checkout" minlength="8">
+                         <input type="password" minlength="8">
                          <div class="checkout_left_button">
                              <div class="button_checkout"><a href="#">Log in</a>
                              </div>
@@ -466,20 +454,26 @@
                          
                          <div class="adress_label">Дата рождения<p> *</p></div>
                          <vuejs-datepicker type="text"  name="name" id = "birthday"></vuejs-datepicker>
+
+                         <div class="adress_label">Контактный телефон<p> *</p></div>
+                        <input type="text" placeholder="Формат +7(000)000-0000" name="name" id = "phone">
+
                       </form>
                   </div>
                   <div class="checkout_form_1_left"> 
                       <form action="#">
-                        <div class="adress_label">Контактный телефон<p> *</p></div>
-                        <input type="text" placeholder="Формат +7(000)000-0000" name="name" id = "phone">
-
-                        <div class="adress_label">mymail@mail.ru, my.mail@mail.ru, my-mail@mail.ru <p> *</p></div>
-                        <input type="text" placeholder="Ваш email" id = "email_adress_1" required>
                         
+                        <div class="adress_label">mymail@mail.ru, my.mail@mail.ru, my-mail@mail.ru <p> *</p></div>
+                        <input type="text" placeholder="Ваш email" id = "email_adress" required>
+                            <div class="adress_label">PASSWORD (8 characters minimum)<p> *</p></div>
+                            <input type="password" id="shipping_checkout" minlength="8">
+                            <div class="adress_label">REPEAT PASSWORD (8 characters minimum)<p> *</p></div>
+                            <input type="password" id="shipping_checkout_repeat" minlength="8"> 
+                
                         <div class="checkout_left_button">
-                          <div id = "send_button"><a href="#">Отправить</a>
+                          <div id = "send_button" @click="handleSendClick" ><a href="#">Отправить</a>
 
-                           <div id = "dialog" title= "Attention">Marked fields are incorrect</div>
+                           <div id = "dialog" title= "Attention" class = "checkout_buttonHide">Marked fields are incorrect</div>
 
                           </div>
                         </div>  
@@ -489,120 +483,15 @@
               <div class= "container border_line"></div> 
               
               <div class="shiping_adress_cap"> 03.<p>Biling information</p></div>
-              <div class= "checkout_form_1 checkout_buttonHide">
-
-                  <div class="checkout_form_1_right">
-                    <h4 class="shipping_adress_cap2">Check as a guest or register</h4>
-                    <p class="shipping_adress_text">Register with us for future convenience</p>
-                    <form action="#" id="form-radio">
-                         <input type="radio"><label class="form-label">checkout as guest</label>
-                         <input type="radio" checked><label class="form-label">register</label>
-                    </form>
-                    <h4 class="shipping_adress_cap2">register and save time!</h4>
-                    <p class="shipping_adress_text">Register with us for future convenience</p>
-                    <p class="shipping_adress_arrow">Fast and easy checkout</p>
-                    <p class="shipping_adress_text">Easy access to your order history and status</p>
-                    <div class="checkout_right_button">
-                        <div class="button_checkout"><a href="#">Continue</a>
-                        </div>
-                    </div>     
-                  </div>
- 
-                  <div class="checkout_form_1_left">
-                      <h4 class="shipping_adress_cap2">Already registed?</h4>
-                      <p class="shipping_adress_text">Please log in below</p>  
-                      <form action="#">
-                          <div class="adress_label">EMAIL ADDRESS <p> *</p></div>
-                          <input type="email" id="email_adress" required>
-                          <div class="adress_label">PASSWORD (8 characters minimum)<p> *</p></div>
-                          <input type="password" id="shipping_checkout" minlength="8">
-                          <div class="checkout_left_button">
-                              <div class="button_checkout"><a href="#">Log in</a>
-                              </div>
-                              <div class="button_Fpassword"><a href="#">Forgot Password ?</a>
-                              </div>
-                          </div>  
-                       </form>
-                  </div>             
-              </div>
+              
               <div class= "container border_line"></div> 
 
               <div class="shiping_adress_cap"> 04.<p>Shipping Adress</p></div>
-              <div class= "checkout_form_1 checkout_buttonHide">
-
-                  <div class="checkout_form_1_right">
-                    <h4 class="shipping_adress_cap2">Check as a guest or register</h4>
-                    <p class="shipping_adress_text">Register with us for future convenience</p>
-                    <form action="#" id="form-radio">
-                         <input type="radio"><label class="form-label">checkout as guest</label>
-                         <input type="radio" checked><label class="form-label">register</label>
-                    </form>
-                    <h4 class="shipping_adress_cap2">register and save time!</h4>
-                    <p class="shipping_adress_text">Register with us for future convenience</p>
-                    <p class="shipping_adress_arrow">Fast and easy checkout</p>
-                    <p class="shipping_adress_text">Easy access to your order history and status</p>
-                    <div class="checkout_right_button">
-                        <div class="button_checkout"><a href="#">Continue</a>
-                        </div>
-                    </div>     
-                  </div>
- 
-                  <div class="checkout_form_1_left">
-                      <h4 class="shipping_adress_cap2">Already registed?</h4>
-                      <p class="shipping_adress_text">Please log in below</p>  
-                      <form action="#">
-                          <div class="adress_label">EMAIL ADDRESS <p> *</p></div>
-                          <input type="email" id="email_adress" required>
-                          <div class="adress_label">PASSWORD (8 characters minimum)<p> *</p></div>
-                          <input type="password" id="shipping_checkout" minlength="8">
-                          <div class="checkout_left_button">
-                              <div class="button_checkout"><a href="#">Log in</a>
-                              </div>
-                              <div class="button_Fpassword"><a href="#">Forgot Password ?</a>
-                              </div>
-                          </div>  
-                       </form>
-                  </div>             
-              </div>
+              
               <div class= "container border_line"></div> 
               
               <div class="shiping_adress_cap"> 05.<p>PAYMENT METHOD</p></div>
-              <div class= "checkout_form_1 checkout_buttonHide">
-
-                  <div class="checkout_form_1_right">
-                    <h4 class="shipping_adress_cap2">Check as a guest or register</h4>
-                    <p class="shipping_adress_text">Register with us for future convenience</p>
-                    <form action="#" id="form-radio">
-                         <input type="radio"><label class="form-label">checkout as guest</label>
-                         <input type="radio" checked><label class="form-label">register</label>
-                    </form>
-                    <h4 class="shipping_adress_cap2">register and save time!</h4>
-                    <p class="shipping_adress_text">Register with us for future convenience</p>
-                    <p class="shipping_adress_arrow">Fast and easy checkout</p>
-                    <p class="shipping_adress_text">Easy access to your order history and status</p>
-                    <div class="checkout_right_button">
-                        <div class="button_checkout"><a href="#">Continue</a>
-                        </div>
-                    </div>     
-                  </div>
- 
-                  <div class="checkout_form_1_left">
-                      <h4 class="shipping_adress_cap2">Already registed?</h4>
-                      <p class="shipping_adress_text">Please log in below</p>  
-                      <form action="#">
-                          <div class="adress_label">EMAIL ADDRESS <p> *</p></div>
-                          <input type="email" id="email_adress" required>
-                          <div class="adress_label">PASSWORD (8 characters minimum)<p> *</p></div>
-                          <input type="password" id="shipping_checkout" minlength="8">
-                          <div class="checkout_left_button">
-                              <div class="button_checkout"><a href="#">Log in</a>
-                              </div>
-                              <div class="button_Fpassword"><a href="#">Forgot Password ?</a>
-                              </div>
-                          </div>  
-                       </form>
-                  </div>             
-              </div>
+              
               <div class= "container border_line"></div>  
               
               <div class="shiping_adress_cap"> 06.<p>Reviews</p></div>
@@ -678,6 +567,7 @@
    </footer>
     </div>
     <script src = "regexp.js"></script>
-    <script src = "dropCart.js"></script>
+    
+    
   </body>
  </html>   

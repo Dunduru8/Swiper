@@ -36,6 +36,35 @@ app.get("/related", (req, res) => {
      });
 });
 
+app.get("/users", (req, res) => {
+    fs.readFile("./db/users.json", "utf-8", (err, data) => {
+        if(err) {
+            return console.log(err)
+        }
+        res.send(data);
+        console.log(data);
+     });
+});
+
+app.post("/users", (req, res) => {
+    fs.readFile("./db/users.json", "utf-8", (err, data) => {
+        if(err) {
+            return console.log(err)
+        }
+    let users = JSON.parse(data);
+    console.log(req.body);
+    users.push(req.body);
+    
+
+    fs.writeFile("./db/users.json", JSON.stringify(users), (err) => {
+        if(err) {
+            return console.log(err);
+        }
+        res.send(req.body);
+    })
+    });
+}); 
+
 app.use ( "/cart", (req, res, next) => {                        //перехватываем все запросы, идущие к козрине, 
     if(["POST", "PATCH", "DELETE"].includes(req.method)){      //проверяем что это один из необходимых методов
     const mapping = {
